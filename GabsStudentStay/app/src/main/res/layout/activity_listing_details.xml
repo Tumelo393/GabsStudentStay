@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header Image Area -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp">
+
+            <ImageView
+                android:id="@+id/ivDetailImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:background="@color/grey_light"
+                android:contentDescription="Property Image" />
+
+            <!-- Floating Back Button -->
+            <TextView
+                android:id="@+id/tvBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="←"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:background="@drawable/button_rounded"
+                android:padding="8dp"
+                android:backgroundTint="#80000000" />
+        </RelativeLayout>
+
+        <!-- Main Content Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-30dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="24dp"
+            app:cardCornerRadius="28dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <!-- Title and Status Row -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvDetailTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_toStartOf="@id/tvDetailStatus"
+                        android:layout_marginEnd="8dp"
+                        android:text="Property Title"
+                        android:textColor="@color/text_primary"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvDetailStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:text="Available"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="4dp"
+                        android:background="@drawable/button_rounded"
+                        android:backgroundTint="@color/grey_extra_light" />
+                </RelativeLayout>
+
+                <!-- Location -->
+                <TextView
+                    android:id="@+id/tvDetailLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📍 Location"
+                    android:textColor="@color/primary"
+                    android:textSize="14sp"
+                    android:layout_marginTop="4dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/grey_light"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Grid of Details (Price, Deposit, Type, Date) -->
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="2"
+                    android:alignmentMode="alignMargins">
+
+                    <!-- Rent Section -->
+                    <LinearLayout 
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" 
+                        android:layout_columnWeight="1" 
+                        android:layout_marginBottom="16dp">
+                        <TextView 
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Monthly Rent" 
+                            android:textSize="11sp" 
+                            android:textColor="@color/text_secondary" />
+                        <TextView 
+                            android:id="@+id/tvDetailPrice" 
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="P 0.00"
+                            android:textSize="17sp" 
+                            android:textStyle="bold" 
+                            android:textColor="@color/accent" />
+                    </LinearLayout>
+
+                    <!-- Deposit Section -->
+                    <LinearLayout 
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" 
+                        android:layout_columnWeight="1" 
+                        android:layout_marginBottom="16dp">
+                        <TextView 
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Sec. Deposit" 
+                            android:textSize="11sp" 
+                            android:textColor="@color/text_secondary" />
+                        <TextView 
+                            android:id="@+id/tvDetailDeposit" 
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="P 0.0" 
+                            android:textSize="17sp" 
+                            android:textStyle="bold" 
+                            android:textColor="@color/text_primary" />
+                    </LinearLayout>
+
+                    <!-- House Type Section -->
+                    <LinearLayout 
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" 
+                        android:layout_columnWeight="1">
+                        <TextView 
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="House Type" 
+                            android:textSize="11sp" 
+                            android:textColor="@color/text_secondary" />
+                        <TextView 
+                            android:id="@+id/tvDetailType" 
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Studio" 
+                            android:textSize="17sp" 
+                            android:textStyle="bold" 
+                            android:textColor="@color/text_primary" />
+                    </LinearLayout>
+
+                    <!-- Availability Section -->
+                    <LinearLayout 
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" 
+                        android:layout_columnWeight="1">
+                        <TextView 
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Available From" 
+                            android:textSize="11sp" 
+                            android:textColor="@color/text_secondary" />
+                        <TextView 
+                            android:id="@+id/tvDetailDate" 
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Immediate" 
+                            android:textSize="17sp" 
+                            android:textStyle="bold" 
+                            android:textColor="@color/primary" />
+                    </LinearLayout>
+                </GridLayout>
+
+                <!-- Amenities Section -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Amenities &amp; Description"
+                    android:textColor="@color/text_primary"
+                    android:textStyle="bold"
+                    android:layout_marginTop="24dp" />
+
+                <TextView
+                    android:id="@+id/tvDetailAmenities"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="No description provided."
+                    android:textColor="@color/text_secondary"
+                    android:lineSpacingExtra="4dp"
+                    android:layout_marginTop="6dp" />
+
+                <!-- Action Buttons -->
+                <Button
+                    android:id="@+id/btnContactLandlord"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="32dp"
+                    android:text="Chat with Landlord"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/btnMakePayment"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="12dp"
+                    android:text="Reserve Room"
+                    android:textAllCaps="false"
+                    android:backgroundTint="@color/accent" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="user_roles">
+        <item>Student</item>
+        <item>Landlord</item>
+    </string-array>
+    
+    <string-array name="house_types">
+        <item>1 bed</item>
+        <item>2 beds</item>
+        <item>3 beds</item>
+        <item>studiopad</item>
+        <item>bachelorpad</item>
+    </string-array>
+
+    <string-array name="gaborone_locations">
+        <item>Gaborone West Phase 1</item>
+        <item>Gaborone West Phase 2</item>
+        <item>Broadhurst</item>
+        <item>The Village</item>
+        <item>Tlokweng</item>
+        <item>Mogoditshane</item>
+        <item>Phakalane</item>
+        <item>Gaborone North</item>
+        <item>Block 3</item>
+        <item>Block 5</item>
+        <item>Block 6</item>
+        <item>Block 7</item>
+        <item>Block 8</item>
+        <item>Block 9</item>
+        <item>Block 10</item>
+        <item>Kgale View</item>
+        <item>Tsholofelo</item>
+        <item>Maruapula</item>
+        <item>Partial</item>
+        <item>Extension 9</item>
+        <item>Extension 11</item>
+        <item>Extension 12</item>
+        <item>Mmopane</item>
+        <item>Gabane</item>
+        <item>Ledumadumana</item>
+        <item>Oodi</item>
+        <item>Metsimotlhabe</item>
+        <item>whitecity</item>
+        <item>extension 14</item>
+        <item>new naledi</item>
+        <item>new canada</item>
+    </string-array>
+
+    <array name="initial_range_values">
+        <item>600.0</item>
+        <item>3000.0</item>
+    </array>
+</resources>
